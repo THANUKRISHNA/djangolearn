@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <th>Name:</th>
+                <td><input type="text" name="name" required></td>
+            </tr>
+            <tr>
+                <th>Email:</th>
+                <td><input type="text" name="email" required></td>
+            </tr>
+            <tr>
+                <th>Mobile:</th>
+                <td><input type="number" name="mobile" required></td>
+            </tr>
+            <tr>
+                <th>Message:</th>
+                <td><textarea name="message" rows="4" required></textarea></td>
+            </tr>
+        </table>
+        <input type="submit" value="Submit">
+    </form>
+    
+</body>
+</html>

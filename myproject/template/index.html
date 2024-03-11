@@ -4,11 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Test Page</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <script src="{% static 'js/script.js' %}"></script>
+    <style>
+        /* Optional CSS styling for the clock */
+        #clock {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>hii</h1>
-</body>
-</html>
+    <h1>Welcome to the Test Page</h1>
+   <!-- In index.html -->
+<a href="{% url 'test' %}">login</a>
+
+
+    <!-- Clock element -->
+    <div id="clock">clock</div>
+
+    <script>
+        // Function to update the clock display
+        function updateClock() {
+            // Get the current date and time
+            var now = new Date();
+
+            // Format the time as HH:MM:SS
+            var hours = now.getHours().toString().padStart(2, '0');
+            var minutes = now.getMinutes().toString().padSt
