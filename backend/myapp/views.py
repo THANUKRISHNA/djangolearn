@@ -6,7 +6,7 @@ from myapp.models import Enquiry  # Change the import statement to import Enquir
 def backend(request):
     if request.method == 'GET':
         return render(request, 'backend.html')
-    elif request.method == 'POST':
+    else:
         name = request.POST.get('name')
         email = request.POST.get('email')
         mobile = request.POST.get('mobile')
@@ -15,5 +15,4 @@ def backend(request):
         # Create an instance of Enquiry and save it to the database
         enquiry_form = Enquiry.objects.create(name=name, email=email, mobile=mobile, message=message)
         return HttpResponse("Done")
-    else:
-        return HttpResponse("Method not allowed")
+    
